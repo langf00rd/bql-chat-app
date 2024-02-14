@@ -49,7 +49,12 @@ class HomeState extends State<Home> {
               ),
               bottomSheet: const MessageInput(),
               body: messagingController.messages.isEmpty
-                  ? const Text('No messages')
+                  ? SizedBox(
+                      height: MediaQuery.of(context).size.height / 2,
+                      child: const Center(
+                        child: Text('No messages'),
+                      ),
+                    )
                   : const MessagesView(),
             ),
     );

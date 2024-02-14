@@ -27,7 +27,6 @@ class _MessagesViewState extends State<MessagesView> {
                 messagingController.messages.length - 1 - index;
             BaseMessage message_ = messagingController.messages[reversedIndex];
             Sender? sender = message_.sender;
-
             if (sender == null) return const SizedBox();
             return MessageBubble(
               message: message_,
